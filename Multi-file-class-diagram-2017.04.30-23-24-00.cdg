@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="XSDWriter" package="write" visibility="public" xPosition="46.0" yPosition="1820.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="createXSDFile" returnType="boolean" visibility="public">
+          <Argument type="String" name="tablename"/>
+          <Argument type="ArrayList&lt;String&gt;" name="colname"/>
+          <Argument type="ArrayList&lt;String&gt;" name="coltype"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Write" package="write" visibility="public" xPosition="192.0" yPosition="2054.0">
+      <Fields>
+        <Field name="output" type="BufferedWriter" visibility="private"/>
+        <Field name="file" type="File" visibility="private"/>
+        <Field name="filename" type="String" visibility="public"/>
+        <Field name="write" type="Write" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="tableName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="startNode" returnType="void" visibility="public">
+          <Argument type="String" name="string"/>
+        </Method>
+        <Method name="endNode" returnType="void" visibility="public">
+          <Argument type="String" name="string"/>
+        </Method>
+        <Method name="writeCharachter" returnType="void" visibility="public">
+          <Argument type="String" name="string"/>
+        </Method>
+        <Method name="deleteLastLine" returnType="void" visibility="public"/>
+        <Method name="writeFirstLine" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String&gt;" name="colname"/>
+          <Argument type="ArrayList&lt;String&gt;" name="coltype"/>
+        </Method>
+        <Method name="createDirectory" returnType="void" visibility="public">
+          <Argument type="String" name="s"/>
+        </Method>
+        <Method name="Createttablenode" returnType="void" visibility="public">
+          <Argument type="String" name="tableName"/>
+        </Method>
+        <Method name="Createtable" returnType="void" visibility="public">
+          <Argument type="String" name="tableName"/>
+          <Argument type="String" name="tableNameop"/>
+          <Argument type="ArrayList&lt;String&gt;" name="colname"/>
+          <Argument type="ArrayList&lt;String&gt;" name="coltype"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Result_set" package="jdbc" visibility="public" xPosition="2094.0" yPosition="37.0">
+      <Fields>
+        <Field name="cursor" type="int" visibility="private"/>
+        <Field name="table" type="Object[][]" visibility="private"/>
+        <Field name="closeBoolean" type="boolean" visibility="private"/>
+        <Field name="statement" type="Statement" visibility="private"/>
+        <Field name="object" type="MyResultSetMetaData" visibility="private"/>
+        <Field name="tableName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Object" name="table1"/>
+          <Argument type="String[]" name="names"/>
+          <Argument type="String" name="tableName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isWrapperFor" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="iface"/>
+        </Method>
+        <Method name="unwrap" returnType="T" visibility="public">
+          <Argument type="Class&lt;T&gt;" name="iface"/>
+        </Method>
+        <Method name="absolute" returnType="boolean" visibility="public">
+          <Argument type="int" name="row"/>
+        </Method>
+        <Method name="afterLast" returnType="void" visibility="public"/>
+        <Method name="beforeFirst" returnType="void" visibility="public"/>
+        <Method name="cancelRowUpdates" returnType="void" visibility="public"/>
+        <Method name="clearWarnings" returnType="void" visibility="public"/>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="deleteRow" returnType="void" visibility="public"/>
+        <Method name="findColumn" returnType="int" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="first" returnType="boolean" visibility="public"/>
+        <Method name="getArray" returnType="Array" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getArray" returnType="Array" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getAsciiStream" returnType="InputStream" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getAsciiStream" returnType="InputStream" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getBigDecimal" returnType="BigDecimal" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getBigDecimal" returnType="BigDecimal" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getBigDecimal" returnType="BigDecimal" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="int" name="scale"/>
+        </Method>
+        <Method name="getBigDecimal" returnType="BigDecimal" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="int" name="scale"/>
+        </Method>
+        <Method name="getBinaryStream" returnType="InputStream" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getBinaryStream" returnType="InputStream" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getBlob" returnType="Blob" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getBlob" returnType="Blob" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getBoolean" returnType="boolean" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getBoolean" returnType="boolean" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getByte" returnType="byte" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getByte" returnType="byte" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getBytes" returnType="byte[]" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getBytes" returnType="byte[]" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getCharacterStream" returnType="Reader" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getCharacterStream" returnType="Reader" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getClob" returnType="Clob" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getClob" returnType="Clob" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getConcurrency" returnType="int" visibility="public"/>
+        <Method name="getCursorName" returnType="String" visibility="public"/>
+        <Method name="getDate" returnType="Date" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getDate" returnType="Date" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getDate" returnType="Date" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Calendar" name="cal"/>
+        </Method>
+        <Method name="getDate" returnType="Date" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Calendar" name="cal"/>
+        </Method>
+        <Method name="getDouble" returnType="double" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getDouble" returnType="double" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getFetchDirection" returnType="int" visibility="public"/>
+        <Method name="getFetchSize" returnType="int" visibility="public"/>
+        <Method name="getFloat" returnType="float" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getFloat" returnType="float" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getHoldability" returnType="int" visibility="public"/>
+        <Method name="getInt" returnType="int" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getInt" returnType="int" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getLong" returnType="long" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getLong" returnType="long" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getMetaData" returnType="MyResultSetMetaData" visibility="public"/>
+        <Method name="getNCharacterStream" returnType="Reader" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getNCharacterStream" returnType="Reader" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getNClob" returnType="NClob" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getNClob" returnType="NClob" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getNString" returnType="String" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getNString" returnType="String" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getObject" returnType="Object" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getObject" returnType="Object" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getObject" returnType="Object" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Map&lt;String, Class&lt;?&gt;&gt;" name="map"/>
+        </Method>
+        <Method name="getObject" returnType="Object" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Map&lt;String, Class&lt;?&gt;&gt;" name="map"/>
+        </Method>
+        <Method name="getObject" returnType="T" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Class&lt;T&gt;" name="type"/>
+        </Method>
+        <Method name="getObject" returnType="T" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Class&lt;T&gt;" name="type"/>
+        </Method>
+        <Method name="getRef" returnType="Ref" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getRef" returnType="Ref" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getRow" returnType="int" visibility="public"/>
+        <Method name="getRowId" returnType="RowId" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getRowId" returnType="RowId" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getSQLXML" returnType="SQLXML" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getSQLXML" returnType="SQLXML" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getShort" returnType="short" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getShort" returnType="short" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getStatement" returnType="Statement" visibility="public"/>
+        <Method name="getString" returnType="String" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getString" returnType="String" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getTime" returnType="Time" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getTime" returnType="Time" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getTime" returnType="Time" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Calendar" name="cal"/>
+        </Method>
+        <Method name="getTime" returnType="Time" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Calendar" name="cal"/>
+        </Method>
+        <Method name="getTimestamp" returnType="Timestamp" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getTimestamp" returnType="Timestamp" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getTimestamp" returnType="Timestamp" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Calendar" name="cal"/>
+        </Method>
+        <Method name="getTimestamp" returnType="Timestamp" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Calendar" name="cal"/>
+        </Method>
+        <Method name="getType" returnType="int" visibility="public"/>
+        <Method name="getURL" returnType="URL" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getURL" returnType="URL" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getUnicodeStream" returnType="InputStream" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="getUnicodeStream" returnType="InputStream" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="getWarnings" returnType="SQLWarning" visibility="public"/>
+        <Method name="insertRow" returnType="void" visibility="public"/>
+        <Method name="isAfterLast" returnType="boolean" visibility="public"/>
+        <Method name="isBeforeFirst" returnType="boolean" visibility="public"/>
+        <Method name="isClosed" returnType="boolean" visibility="public"/>
+        <Method name="isFirst" returnType="boolean" visibility="public"/>
+        <Method name="isLast" returnType="boolean" visibility="public"/>
+        <Method name="last" returnType="boolean" visibility="public"/>
+        <Method name="moveToCurrentRow" returnType="void" visibility="public"/>
+        <Method name="moveToInsertRow" returnType="void" visibility="public"/>
+        <Method name="next" returnType="boolean" visibility="public"/>
+        <Method name="previous" returnType="boolean" visibility="public"/>
+        <Method name="refreshRow" returnType="void" visibility="public"/>
+        <Method name="relative" returnType="boolean" visibility="public">
+          <Argument type="int" name="rows"/>
+        </Method>
+        <Method name="rowDeleted" returnType="boolean" visibility="public"/>
+        <Method name="rowInserted" returnType="boolean" visibility="public"/>
+        <Method name="rowUpdated" returnType="boolean" visibility="public"/>
+        <Method name="setFetchDirection" returnType="void" visibility="public">
+          <Argument type="int" name="direction"/>
+        </Method>
+        <Method name="setFetchSize" returnType="void" visibility="public">
+          <Argument type="int" name="rows"/>
+        </Method>
+        <Method name="updateArray" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Array" name="x"/>
+        </Method>
+        <Method name="updateArray" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Array" name="x"/>
+        </Method>
+        <Method name="updateAsciiStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="InputStream" name="x"/>
+        </Method>
+        <Method name="updateAsciiStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="InputStream" name="x"/>
+        </Method>
+        <Method name="updateAsciiStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="InputStream" name="x"/>
+          <Argument type="int" name="length"/>
+        </Method>
+        <Method name="updateAsciiStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="InputStream" name="x"/>
+          <Argument type="int" name="length"/>
+        </Method>
+        <Method name="updateAsciiStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="InputStream" name="x"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateAsciiStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="InputStream" name="x"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateBigDecimal" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="BigDecimal" name="x"/>
+        </Method>
+        <Method name="updateBigDecimal" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="BigDecimal" name="x"/>
+        </Method>
+        <Method name="updateBinaryStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="InputStream" name="x"/>
+        </Method>
+        <Method name="updateBinaryStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="InputStream" name="x"/>
+        </Method>
+        <Method name="updateBinaryStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="InputStream" name="x"/>
+          <Argument type="int" name="length"/>
+        </Method>
+        <Method name="updateBinaryStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="InputStream" name="x"/>
+          <Argument type="int" name="length"/>
+        </Method>
+        <Method name="updateBinaryStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="InputStream" name="x"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateBinaryStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="InputStream" name="x"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateBlob" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Blob" name="x"/>
+        </Method>
+        <Method name="updateBlob" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Blob" name="x"/>
+        </Method>
+        <Method name="updateBlob" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="InputStream" name="inputStream"/>
+        </Method>
+        <Method name="updateBlob" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="InputStream" name="inputStream"/>
+        </Method>
+        <Method name="updateBlob" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="InputStream" name="inputStream"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateBlob" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="InputStream" name="inputStream"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateBoolean" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="boolean" name="x"/>
+        </Method>
+        <Method name="updateBoolean" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="boolean" name="x"/>
+        </Method>
+        <Method name="updateByte" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="byte" name="x"/>
+        </Method>
+        <Method name="updateByte" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="byte" name="x"/>
+        </Method>
+        <Method name="updateBytes" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="byte[]" name="x"/>
+        </Method>
+        <Method name="updateBytes" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="byte[]" name="x"/>
+        </Method>
+        <Method name="updateCharacterStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Reader" name="x"/>
+        </Method>
+        <Method name="updateCharacterStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Reader" name="reader"/>
+        </Method>
+        <Method name="updateCharacterStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Reader" name="x"/>
+          <Argument type="int" name="length"/>
+        </Method>
+        <Method name="updateCharacterStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Reader" name="reader"/>
+          <Argument type="int" name="length"/>
+        </Method>
+        <Method name="updateCharacterStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Reader" name="x"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateCharacterStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Reader" name="reader"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateClob" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Clob" name="x"/>
+        </Method>
+        <Method name="updateClob" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Clob" name="x"/>
+        </Method>
+        <Method name="updateClob" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Reader" name="reader"/>
+        </Method>
+        <Method name="updateClob" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Reader" name="reader"/>
+        </Method>
+        <Method name="updateClob" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Reader" name="reader"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateClob" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Reader" name="reader"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateDate" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Date" name="x"/>
+        </Method>
+        <Method name="updateDate" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Date" name="x"/>
+        </Method>
+        <Method name="updateDouble" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="double" name="x"/>
+        </Method>
+        <Method name="updateDouble" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="double" name="x"/>
+        </Method>
+        <Method name="updateFloat" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="float" name="x"/>
+        </Method>
+        <Method name="updateFloat" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="float" name="x"/>
+        </Method>
+        <Method name="updateInt" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="updateInt" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="updateLong" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="long" name="x"/>
+        </Method>
+        <Method name="updateLong" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="long" name="x"/>
+        </Method>
+        <Method name="updateNCharacterStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Reader" name="x"/>
+        </Method>
+        <Method name="updateNCharacterStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Reader" name="reader"/>
+        </Method>
+        <Method name="updateNCharacterStream" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Reader" name="x"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateNCharacterStream" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Reader" name="reader"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateNClob" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="NClob" name="nClob"/>
+        </Method>
+        <Method name="updateNClob" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="NClob" name="nClob"/>
+        </Method>
+        <Method name="updateNClob" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Reader" name="reader"/>
+        </Method>
+        <Method name="updateNClob" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Reader" name="reader"/>
+        </Method>
+        <Method name="updateNClob" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Reader" name="reader"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateNClob" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Reader" name="reader"/>
+          <Argument type="long" name="length"/>
+        </Method>
+        <Method name="updateNString" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="String" name="nString"/>
+        </Method>
+        <Method name="updateNString" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="String" name="nString"/>
+        </Method>
+        <Method name="updateNull" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+        </Method>
+        <Method name="updateNull" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+        </Method>
+        <Method name="updateObject" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Object" name="x"/>
+        </Method>
+        <Method name="updateObject" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Object" name="x"/>
+        </Method>
+        <Method name="updateObject" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Object" name="x"/>
+          <Argument type="int" name="scaleOrLength"/>
+        </Method>
+        <Method name="updateObject" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Object" name="x"/>
+          <Argument type="int" name="scaleOrLength"/>
+        </Method>
+        <Method name="updateRef" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Ref" name="x"/>
+        </Method>
+        <Method name="updateRef" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Ref" name="x"/>
+        </Method>
+        <Method name="updateRow" returnType="void" visibility="public"/>
+        <Method name="updateRowId" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="RowId" name="x"/>
+        </Method>
+        <Method name="updateRowId" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="RowId" name="x"/>
+        </Method>
+        <Method name="updateSQLXML" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="SQLXML" name="xmlObject"/>
+        </Method>
+        <Method name="updateSQLXML" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="SQLXML" name="xmlObject"/>
+        </Method>
+        <Method name="updateShort" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="short" name="x"/>
+        </Method>
+        <Method name="updateShort" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="short" name="x"/>
+        </Method>
+        <Method name="updateString" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="String" name="x"/>
+        </Method>
+        <Method name="updateString" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="String" name="x"/>
+        </Method>
+        <Method name="updateTime" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Time" name="x"/>
+        </Method>
+        <Method name="updateTime" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Time" name="x"/>
+        </Method>
+        <Method name="updateTimestamp" returnType="void" visibility="public">
+          <Argument type="int" name="columnIndex"/>
+          <Argument type="Timestamp" name="x"/>
+        </Method>
+        <Method name="updateTimestamp" returnType="void" visibility="public">
+          <Argument type="String" name="columnLabel"/>
+          <Argument type="Timestamp" name="x"/>
+        </Method>
+        <Method name="wasNull" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MyStatement" package="jdbc" visibility="public" xPosition="850.0" yPosition="1548.0">
+      <Fields>
+        <Field name="connect" type="MyConnection" visibility="package"/>
+        <Field name="path" type="String" visibility="package"/>
+        <Field name="dbms" type="DBMS" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="path"/>
+          <Argument type="MyConnection" name="c"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isWrapperFor" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="iface"/>
+        </Method>
+        <Method name="unwrap" returnType="T" visibility="public">
+          <Argument type="Class&lt;T&gt;" name="iface"/>
+        </Method>
+        <Method name="addBatch" returnType="void" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="cancel" returnType="void" visibility="public"/>
+        <Method name="clearBatch" returnType="void" visibility="public"/>
+        <Method name="clearWarnings" returnType="void" visibility="public"/>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="closeOnCompletion" returnType="void" visibility="public"/>
+        <Method name="execute" returnType="boolean" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="execute" returnType="boolean" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int" name="autoGeneratedKeys"/>
+        </Method>
+        <Method name="execute" returnType="boolean" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int[]" name="columnIndexes"/>
+        </Method>
+        <Method name="execute" returnType="boolean" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="String[]" name="columnNames"/>
+        </Method>
+        <Method name="executeBatch" returnType="int[]" visibility="public"/>
+        <Method name="executeQuery" returnType="ResultSet" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="executeUpdate" returnType="int" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="executeUpdate" returnType="int" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int" name="autoGeneratedKeys"/>
+        </Method>
+        <Method name="executeUpdate" returnType="int" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int[]" name="columnIndexes"/>
+        </Method>
+        <Method name="executeUpdate" returnType="int" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="String[]" name="columnNames"/>
+        </Method>
+        <Method name="getConnection" returnType="MyConnection" visibility="public"/>
+        <Method name="getFetchDirection" returnType="int" visibility="public"/>
+        <Method name="getFetchSize" returnType="int" visibility="public"/>
+        <Method name="getGeneratedKeys" returnType="ResultSet" visibility="public"/>
+        <Method name="getMaxFieldSize" returnType="int" visibility="public"/>
+        <Method name="getMaxRows" returnType="int" visibility="public"/>
+        <Method name="getMoreResults" returnType="boolean" visibility="public"/>
+        <Method name="getMoreResults" returnType="boolean" visibility="public">
+          <Argument type="int" name="current"/>
+        </Method>
+        <Method name="getQueryTimeout" returnType="int" visibility="public"/>
+        <Method name="getResultSet" returnType="ResultSet" visibility="public"/>
+        <Method name="getResultSetConcurrency" returnType="int" visibility="public"/>
+        <Method name="getResultSetHoldability" returnType="int" visibility="public"/>
+        <Method name="getResultSetType" returnType="int" visibility="public"/>
+        <Method name="getUpdateCount" returnType="int" visibility="public"/>
+        <Method name="getWarnings" returnType="SQLWarning" visibility="public"/>
+        <Method name="isCloseOnCompletion" returnType="boolean" visibility="public"/>
+        <Method name="isClosed" returnType="boolean" visibility="public"/>
+        <Method name="isPoolable" returnType="boolean" visibility="public"/>
+        <Method name="setCursorName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setEscapeProcessing" returnType="void" visibility="public">
+          <Argument type="boolean" name="enable"/>
+        </Method>
+        <Method name="setFetchDirection" returnType="void" visibility="public">
+          <Argument type="int" name="direction"/>
+        </Method>
+        <Method name="setFetchSize" returnType="void" visibility="public">
+          <Argument type="int" name="rows"/>
+        </Method>
+        <Method name="setMaxFieldSize" returnType="void" visibility="public">
+          <Argument type="int" name="max"/>
+        </Method>
+        <Method name="setMaxRows" returnType="void" visibility="public">
+          <Argument type="int" name="max"/>
+        </Method>
+        <Method name="setPoolable" returnType="void" visibility="public">
+          <Argument type="boolean" name="poolable"/>
+        </Method>
+        <Method name="setQueryTimeout" returnType="void" visibility="public">
+          <Argument type="int" name="seconds"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MyDriver" package="jdbc" visibility="public" xPosition="1426.0" yPosition="1548.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="acceptsURL" returnType="boolean" visibility="public">
+          <Argument type="String" name="url"/>
+        </Method>
+        <Method name="connect" returnType="Connection" visibility="public">
+          <Argument type="String" name="url"/>
+          <Argument type="Properties" name="info"/>
+        </Method>
+        <Method name="getMajorVersion" returnType="int" visibility="public"/>
+        <Method name="getMinorVersion" returnType="int" visibility="public"/>
+        <Method name="getParentLogger" returnType="Logger" visibility="public"/>
+        <Method name="getPropertyInfo" returnType="DriverPropertyInfo[]" visibility="public">
+          <Argument type="String" name="url"/>
+          <Argument type="Properties" name="info"/>
+        </Method>
+        <Method name="jdbcCompliant" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MyResultSetMetaData" package="jdbc" visibility="public" xPosition="1506.0" yPosition="321.0">
+      <Fields>
+        <Field name="Integer" type="Object" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="table" type="Object" visibility="private"/>
+        <Field name="closeBoolean" type="boolean" visibility="private"/>
+        <Field name="tableName" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Object[][]" name="table"/>
+          <Argument type="String" name="tableName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="isWrapperFor" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="arg0"/>
+        </Method>
+        <Method name="unwrap" returnType="T" visibility="public">
+          <Argument type="Class&lt;T&gt;" name="arg0"/>
+        </Method>
+        <Method name="getCatalogName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getColumnClassName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getColumnCount" returnType="int" visibility="public"/>
+        <Method name="getColumnDisplaySize" returnType="int" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getColumnLabel" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getColumnName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getColumnType" returnType="int" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getColumnTypeName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getPrecision" returnType="int" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getScale" returnType="int" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getSchemaName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="getTableName" returnType="String" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isAutoIncrement" returnType="boolean" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isCaseSensitive" returnType="boolean" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isCurrency" returnType="boolean" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isDefinitelyWritable" returnType="boolean" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isNullable" returnType="int" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isReadOnly" returnType="boolean" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isSearchable" returnType="boolean" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isSigned" returnType="boolean" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+        <Method name="isWritable" returnType="boolean" visibility="public">
+          <Argument type="int" name="column"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MyConnection" package="jdbc" visibility="public" xPosition="728.0" yPosition="161.0">
+      <Fields>
+        <Field name="path" type="String" visibility="package"/>
+        <Field name="statement" type="MyStatement" visibility="package"/>
+        <Field name="closeBoolean" type="boolean" visibility="private"/>
+        <Field name="object" type="MyResultSetMetaData" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="path"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="isWrapperFor" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="arg0"/>
+        </Method>
+        <Method name="unwrap" returnType="T" visibility="public">
+          <Argument type="Class&lt;T&gt;" name="arg0"/>
+        </Method>
+        <Method name="abort" returnType="void" visibility="public">
+          <Argument type="Executor" name="executor"/>
+        </Method>
+        <Method name="clearWarnings" returnType="void" visibility="public"/>
+        <Method name="close" returnType="void" visibility="public"/>
+        <Method name="commit" returnType="void" visibility="public"/>
+        <Method name="createArrayOf" returnType="Array" visibility="public">
+          <Argument type="String" name="typeName"/>
+          <Argument type="Object[]" name="elements"/>
+        </Method>
+        <Method name="createBlob" returnType="Blob" visibility="public"/>
+        <Method name="createClob" returnType="Clob" visibility="public"/>
+        <Method name="createNClob" returnType="NClob" visibility="public"/>
+        <Method name="createSQLXML" returnType="SQLXML" visibility="public"/>
+        <Method name="createStatement" returnType="MyStatement" visibility="public"/>
+        <Method name="createStatement" returnType="Statement" visibility="public">
+          <Argument type="int" name="resultSetType"/>
+          <Argument type="int" name="resultSetConcurrency"/>
+        </Method>
+        <Method name="createStatement" returnType="Statement" visibility="public">
+          <Argument type="int" name="resultSetType"/>
+          <Argument type="int" name="resultSetConcurrency"/>
+          <Argument type="int" name="resultSetHoldability"/>
+        </Method>
+        <Method name="createStruct" returnType="Struct" visibility="public">
+          <Argument type="String" name="typeName"/>
+          <Argument type="Object[]" name="attributes"/>
+        </Method>
+        <Method name="getAutoCommit" returnType="boolean" visibility="public"/>
+        <Method name="getCatalog" returnType="String" visibility="public"/>
+        <Method name="getClientInfo" returnType="Properties" visibility="public"/>
+        <Method name="getClientInfo" returnType="String" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getHoldability" returnType="int" visibility="public"/>
+        <Method name="getMetaData" returnType="DatabaseMetaData" visibility="public"/>
+        <Method name="getNetworkTimeout" returnType="int" visibility="public"/>
+        <Method name="getSchema" returnType="String" visibility="public"/>
+        <Method name="getTransactionIsolation" returnType="int" visibility="public"/>
+        <Method name="getTypeMap" returnType="Map&lt;String, Class&lt;?&gt;&gt;" visibility="public"/>
+        <Method name="getWarnings" returnType="SQLWarning" visibility="public"/>
+        <Method name="isClosed" returnType="boolean" visibility="public"/>
+        <Method name="isReadOnly" returnType="boolean" visibility="public"/>
+        <Method name="isValid" returnType="boolean" visibility="public">
+          <Argument type="int" name="timeout"/>
+        </Method>
+        <Method name="nativeSQL" returnType="String" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="prepareCall" returnType="CallableStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="prepareCall" returnType="CallableStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int" name="resultSetType"/>
+          <Argument type="int" name="resultSetConcurrency"/>
+        </Method>
+        <Method name="prepareCall" returnType="CallableStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int" name="resultSetType"/>
+          <Argument type="int" name="resultSetConcurrency"/>
+          <Argument type="int" name="resultSetHoldability"/>
+        </Method>
+        <Method name="prepareStatement" returnType="PreparedStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+        </Method>
+        <Method name="prepareStatement" returnType="PreparedStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int" name="autoGeneratedKeys"/>
+        </Method>
+        <Method name="prepareStatement" returnType="PreparedStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int[]" name="columnIndexes"/>
+        </Method>
+        <Method name="prepareStatement" returnType="PreparedStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="String[]" name="columnNames"/>
+        </Method>
+        <Method name="prepareStatement" returnType="PreparedStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int" name="resultSetType"/>
+          <Argument type="int" name="resultSetConcurrency"/>
+        </Method>
+        <Method name="prepareStatement" returnType="PreparedStatement" visibility="public">
+          <Argument type="String" name="sql"/>
+          <Argument type="int" name="resultSetType"/>
+          <Argument type="int" name="resultSetConcurrency"/>
+          <Argument type="int" name="resultSetHoldability"/>
+        </Method>
+        <Method name="releaseSavepoint" returnType="void" visibility="public">
+          <Argument type="Savepoint" name="savepoint"/>
+        </Method>
+        <Method name="rollback" returnType="void" visibility="public"/>
+        <Method name="rollback" returnType="void" visibility="public">
+          <Argument type="Savepoint" name="savepoint"/>
+        </Method>
+        <Method name="setAutoCommit" returnType="void" visibility="public">
+          <Argument type="boolean" name="autoCommit"/>
+        </Method>
+        <Method name="setCatalog" returnType="void" visibility="public">
+          <Argument type="String" name="catalog"/>
+        </Method>
+        <Method name="setClientInfo" returnType="void" visibility="public">
+          <Argument type="Properties" name="properties"/>
+        </Method>
+        <Method name="setClientInfo" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="value"/>
+        </Method>
+        <Method name="setHoldability" returnType="void" visibility="public">
+          <Argument type="int" name="holdability"/>
+        </Method>
+        <Method name="setNetworkTimeout" returnType="void" visibility="public">
+          <Argument type="Executor" name="executor"/>
+          <Argument type="int" name="milliseconds"/>
+        </Method>
+        <Method name="setReadOnly" returnType="void" visibility="public">
+          <Argument type="boolean" name="readOnly"/>
+        </Method>
+        <Method name="setSavepoint" returnType="Savepoint" visibility="public"/>
+        <Method name="setSavepoint" returnType="Savepoint" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="setSchema" returnType="void" visibility="public">
+          <Argument type="String" name="schema"/>
+        </Method>
+        <Method name="setTransactionIsolation" returnType="void" visibility="public">
+          <Argument type="int" name="level"/>
+        </Method>
+        <Method name="setTypeMap" returnType="void" visibility="public">
+          <Argument type="Map&lt;String, Class&lt;?&gt;&gt;" name="map"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DBMS" package="dBMS" visibility="public" xPosition="77.0" yPosition="503.0">
+      <Fields>
+        <Field name="dbms" type="DBMS" visibility="private" isStatic="true"/>
+        <Field name="newpath" type="String" visibility="private" isStatic="true"/>
+        <Field name="tableName1" type="String" visibility="private"/>
+        <Field name="REGEX_CT" type="String" visibility="package"/>
+        <Field name="REGEX_DT" type="String" visibility="package"/>
+        <Field name="REGEX_DFT" type="String" visibility="package"/>
+        <Field name="REGEX_II" type="String" visibility="package"/>
+        <Field name="REGEX_SF" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInstance" returnType="DBMS" visibility="public" isStatic="true"/>
+        <Method name="setpath" returnType="void" visibility="public">
+          <Argument type="String" name="path"/>
+        </Method>
+        <Method name="query" returnType="Object[][]" visibility="public">
+          <Argument type="String" name="tablename"/>
+          <Argument type="String" name="field"/>
+          <Argument type="String" name="value"/>
+          <Argument type="char" name="condition"/>
+        </Method>
+        <Method name="delete" returnType="int" visibility="public">
+          <Argument type="String" name="tablename"/>
+          <Argument type="String" name="field"/>
+          <Argument type="String" name="value"/>
+          <Argument type="char" name="condition"/>
+        </Method>
+        <Method name="appendXML" returnType="void" visibility="public">
+          <Argument type="String" name="tablename"/>
+          <Argument type="HashMap&lt;String, String&gt;" name="newElement"/>
+        </Method>
+        <Method name="getColunmsinMap" returnType="HashMap&lt;String, String&gt;" visibility="public">
+          <Argument type="String" name="tablename"/>
+        </Method>
+        <Method name="createTable" returnType="boolean" visibility="public">
+          <Argument type="String" name="tablename"/>
+          <Argument type="ArrayList&lt;String&gt;" name="names"/>
+          <Argument type="ArrayList&lt;String&gt;" name="types"/>
+        </Method>
+        <Method name="dropTable" returnType="boolean" visibility="public">
+          <Argument type="String" name="tablename"/>
+        </Method>
+        <Method name="getnameofcoluoms" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="String" name="tablename"/>
+        </Method>
+        <Method name="gettypesofcoluoms" returnType="ArrayList&lt;String&gt;" visibility="public">
+          <Argument type="String" name="tablename"/>
+        </Method>
+        <Method name="validationByXSD" returnType="boolean" visibility="public">
+          <Argument type="String" name="xmlfilename"/>
+          <Argument type="String" name="xsdfilename"/>
+        </Method>
+        <Method name="validateBeforeinsert" returnType="boolean" visibility="public">
+          <Argument type="String" name="tableName"/>
+          <Argument type="HashMap&lt;String, String&gt;" name="newElement"/>
+        </Method>
+        <Method name="getpass" returnType="String" visibility="public"/>
+        <Method name="callMethods" returnType="void" visibility="public">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="executeStructureQuery" returnType="boolean" visibility="public">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="executeRetrievalQuery" returnType="Object[][]" visibility="public">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="executeUpdateQuery" returnType="int" visibility="public">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="gettablename" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Database" package="eg.edu.alexu.csd.oop.db" visibility="public" xPosition="344.0" yPosition="192.0">
+      <Methods>
+        <Method name="executeStructureQuery" returnType="boolean" visibility="public">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="executeRetrievalQuery" returnType="Object[][]" visibility="public">
+          <Argument type="String" name="query"/>
+        </Method>
+        <Method name="executeUpdateQuery" returnType="int" visibility="public">
+          <Argument type="String" name="query"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="dBMS.DBMS" target="eg.edu.alexu.csd.oop.db.Database"/>
+    <UseRelation name="" source="dBMS.DBMS" target="write.Write" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="write" source="write.Write" target="write.Write" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dBMS.DBMS" target="dBMS.DBMS" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dbms" source="dBMS.DBMS" target="dBMS.DBMS" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="dBMS.DBMS" target="write.XSDWriter" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="statement" source="jdbc.MyConnection" target="jdbc.MyStatement" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="object" source="jdbc.Result_set" target="jdbc.MyResultSetMetaData" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="MyResultSetMetaData"/>
+    <HasRelation name="object" source="jdbc.MyConnection" target="jdbc.MyResultSetMetaData" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="MyResultSetMetaData"/>
+    <UseRelation source="jdbc.MyConnection" target="jdbc.MyStatement" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dbms" source="jdbc.MyStatement" target="dBMS.DBMS" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="connect" source="jdbc.MyStatement" target="jdbc.MyConnection" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="jdbc.MyStatement" target="jdbc.MyConnection" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="jdbc.Result_set" target="jdbc.MyResultSetMetaData" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="jdbc.MyConnection" target="eg.edu.alexu.csd.oop.db.Database" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
